@@ -1,0 +1,53 @@
+﻿<Page x:Class="NETFLIX.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NETFLIX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1450" 
+      Title="WelcomePage" >
+
+    <Grid>
+        <Image Source="/Images/BY-ru-20230417-popsignuptwoweeks-perspective_alpha_website_large.jpg" Stretch="UniformToFill"  >
+            <Image.Effect>
+                <BlurEffect Radius="5"></BlurEffect>
+            </Image.Effect>
+        </Image>
+        <Image Source="/Images/Netflix_2015_logo.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="140" Width="280" Margin="112,29,0,0" />
+
+        <Grid Background="#0d0d0d" Opacity="0.9" >
+            <Button FontSize="26" Content="Выход" HorizontalAlignment="Right" Margin="0,15,33,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10" Click="Button_Click" Width="109">
+            </Button>
+            <Label Foreground="White" FontSize="30" Content="Страница администратора" FontWeight="Bold" HorizontalAlignment="Left" Margin="569,29,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+        <Border VerticalAlignment="Top" HorizontalAlignment="Left" CornerRadius="10" Margin="44,83,0,0" BorderBrush="White" BorderThickness="2" Width="729" Height="607">
+            <Grid >
+                <TextBox CaretBrush="White" x:Name="TitleTextBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="33,117,0,0" VerticalAlignment="Top" Width="414"/>
+                <Label  Foreground="White" FontSize="20" Content="Название"  HorizontalAlignment="Left" Margin="33,80,0,0" VerticalAlignment="Top"/>
+                <Label  Foreground="White" FontSize="24" FontWeight="Black" Content="Добавление сериала"  HorizontalAlignment="Left" Margin="33,33,0,0" VerticalAlignment="Top"/>
+                <TextBox  CaretBrush="White" x:Name="GenreTextBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="33,186,0,0" VerticalAlignment="Top" Width="414"/>
+                <Label  Foreground="White" FontSize="20" Content="Жанр"  HorizontalAlignment="Left" Margin="33,149,0,0" VerticalAlignment="Top"/>
+                <TextBox  CaretBrush="White" x:Name="DirectorTextBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="33,252,0,0" VerticalAlignment="Top" Width="414"/>
+                <Label  Foreground="White" FontSize="20" Content="Режиссёр"  HorizontalAlignment="Left" Margin="33,215,0,0" VerticalAlignment="Top"/>
+                <TextBox  CaretBrush="White" x:Name="CastTextBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="33,323,0,0" VerticalAlignment="Top" Width="414"/>
+                <Label  Foreground="White" FontSize="20" Content="Актёрский состав"  HorizontalAlignment="Left" Margin="33,286,0,0" VerticalAlignment="Top"/>
+                <Label  Foreground="White" FontSize="20" Content="Дата выпуска"  HorizontalAlignment="Left" Margin="33,352,0,0" VerticalAlignment="Top"/>
+                <DatePicker Name="ReleaseDateTextBox" FontSize="20" HorizontalAlignment="Left" Margin="33,394,0,0" VerticalAlignment="Top" Width="414"/>
+                <Label  Foreground="White" FontSize="20" Content="Страна производитель"  HorizontalAlignment="Left" Margin="33,429,0,0" VerticalAlignment="Top"/>
+                <TextBox CaretBrush="White" x:Name="ManufacturerСountryTextBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="36,471,0,0" VerticalAlignment="Top" Width="414"/>
+                <Button FontSize="26" Content="Сохранить" HorizontalAlignment="Left" Margin="38,536,0,0" VerticalAlignment="Top" Background="Green" Foreground="White" Padding="10" Width="664" Click="Button_Click_1">
+                </Button>
+                <Image x:Name="SeriesImage" Source="/Images/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png" VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="452,117,0,0" MouseDown="Image_MouseDown" Cursor="Hand" Height="178" Width="259"/>
+
+            </Grid>
+        </Border>
+        <Border VerticalAlignment="Top" HorizontalAlignment="Left"  BorderBrush="White" CornerRadius="10" BorderThickness="2" Margin="778,83,0,0" Height="607" Width="662">
+            <Grid>
+                <ListBox VirtualizingPanel.ScrollUnit="Pixel" ItemsSource="{Binding SeriesElementsList}" SelectedItem="{Binding SelectedSeries}" Background="#0d0d0d" Margin="0,0,0,72"></ListBox>
+                <Button FontSize="26" Content="Удалить" HorizontalAlignment="Center" Margin="0,536,0,0" VerticalAlignment="Top" Background="Red" Foreground="White" Padding="10" Width="617" Click="Button_Click_2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

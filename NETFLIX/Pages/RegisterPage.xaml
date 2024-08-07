@@ -1,0 +1,32 @@
+﻿<Page x:Class="NETFLIX.Pages.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NETFLIX.Pages"
+      mc:Ignorable="d" 
+     d:DesignHeight="700" d:DesignWidth="1450" 
+      Title="WelcomePage" >
+
+    <Grid>
+        <Image Source="/Images/BY-ru-20230417-popsignuptwoweeks-perspective_alpha_website_large.jpg" Stretch="UniformToFill"  >
+            <Image.Effect>
+                <BlurEffect Radius="5"></BlurEffect>
+            </Image.Effect>
+        </Image>
+        <Image Source="/Images/Netflix_2015_logo.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="140" Width="280" Margin="112,29,0,0" />
+        <Button FontSize="26" Content="Назад" HorizontalAlignment="Right" Margin="0,29,112,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10" Click="Button_Click">
+
+        </Button>
+        <Grid Background="#0d0d0d" Margin="486,157,486,0" Opacity="0.9">
+            <Label Foreground="White" FontSize="30" Content="Регистрация" FontWeight="Bold" HorizontalAlignment="Left" Margin="86,68,0,0" VerticalAlignment="Top"/>
+            <TextBox CaretBrush="White" Name="EmailTextBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="92,165,0,0" VerticalAlignment="Top" Width="307"/>
+            <Label  Foreground="White" FontSize="20" Content="Адрес электронной почты"  HorizontalAlignment="Left" Margin="86,123,0,0" VerticalAlignment="Top"/>
+            <PasswordBox CaretBrush="White" Name="PasswordBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="92,236,0,0" VerticalAlignment="Top" Width="307"/>
+            <Label  Foreground="White" FontSize="20" Content="Пароль"  HorizontalAlignment="Left" Margin="86,194,0,0" VerticalAlignment="Top"/>
+            <Button FontSize="26" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="92,398,0,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10" Width="307" Click="Button_Click_1"/>
+            <PasswordBox CaretBrush="White" Name="RepeatPasswordBox" Foreground="white" FontSize="20" Background="gray" HorizontalAlignment="Left" Margin="92,312,0,0" VerticalAlignment="Top" Width="307"/>
+            <Label  Foreground="White" FontSize="20" Content="Повторите пароль"  HorizontalAlignment="Left" Margin="86,270,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Page>

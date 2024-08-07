@@ -1,0 +1,39 @@
+﻿<Page x:Class="NETFLIX.Pages.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NETFLIX.Pages"
+      mc:Ignorable="d" 
+    d:DesignHeight="700" d:DesignWidth="1450" 
+      Title="WelcomePage" >
+
+    <Grid>
+        <Image Source="/Images/BY-ru-20230417-popsignuptwoweeks-perspective_alpha_website_large.jpg" Stretch="UniformToFill"  >
+            <Image.Effect>
+                <BlurEffect Radius="5"></BlurEffect>
+            </Image.Effect>
+        </Image>
+        <Image Source="/Images/Netflix_2015_logo.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="140" Width="280" Margin="112,29,0,0" />
+        <Button FontSize="26" Content="Выход" HorizontalAlignment="Right" Margin="0,29,28,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10" Click="Button_Click">
+        </Button>
+        <ListBox HorizontalContentAlignment="Center" Name="MainListBox" Background="#1f1f1f"  VirtualizingPanel.ScrollUnit="Pixel" ItemsSource="{Binding UserSeriesElems}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="397,102,0,0" Height="588" Width="660" />
+        <Label Name="EmailLabel" Foreground="White" FontSize="24" Content="Email" FontWeight="Bold" HorizontalAlignment="Left" Margin="1083,91,0,0" VerticalAlignment="Top"/>
+        <Button FontSize="26" Content="Избранное" HorizontalAlignment="Left" Margin="1083,138,0,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10"  Width="339" Click="Button_Click_1"/>
+        <TextBox Name="SearchTextBox" CaretBrush="White" Foreground="white" FontSize="26" Background="gray" HorizontalAlignment="Left" Margin="397,47,0,0" VerticalAlignment="Top" Width="549" Height="51"/>
+        <Button FontSize="26" Content="Поиск" HorizontalAlignment="Left" Margin="952,47,0,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10"  Width="105" Height="51" Click="Button_Click_2" />
+        <ComboBox Name="GenresComboBox" FontSize="20" HorizontalAlignment="Left" Margin="112,197,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label  Foreground="White" FontSize="24" Content="Категории" FontWeight="Bold" HorizontalAlignment="Left" Margin="112,110,0,0" VerticalAlignment="Top"/>
+        <Label  Foreground="White" FontSize="20" Content="Жанры" FontWeight="Bold" HorizontalAlignment="Left" Margin="112,152,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CountryComboBox" FontSize="20" HorizontalAlignment="Left" Margin="112,275,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label  Foreground="White" FontSize="20" Content="Страна" FontWeight="Bold" HorizontalAlignment="Left" Margin="112,230,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RatingComboBox" FontSize="20" HorizontalAlignment="Left" Margin="112,353,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label  Foreground="White" FontSize="20" Content="Рейтинг" FontWeight="Bold" HorizontalAlignment="Left" Margin="112,308,0,0" VerticalAlignment="Top"/>
+        <Label  Foreground="White" FontSize="24" Content="Фильтры" FontWeight="Bold" HorizontalAlignment="Left" Margin="112,396,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DirectorTextBox" FontSize="20" HorizontalAlignment="Left" Margin="112,478,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label  Foreground="White" FontSize="20" Content="Режиссёр" FontWeight="Bold" HorizontalAlignment="Left" Margin="117,441,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustTextBox" FontSize="20" HorizontalAlignment="Left" Margin="112,544,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label  Foreground="White" FontSize="20" Content="Актёр" FontWeight="Bold" HorizontalAlignment="Left" Margin="119,507,0,0" VerticalAlignment="Top"/>
+        <Button FontSize="26" Content="Сброс" HorizontalAlignment="Left" Margin="112,627,0,0" VerticalAlignment="Top" Background="red" Foreground="White" Padding="10"  Width="280" Height="57" Click="Button_Click_3" />
+    </Grid>
+</Page>
